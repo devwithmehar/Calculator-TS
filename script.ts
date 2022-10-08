@@ -5,6 +5,7 @@ class Calculator {
   currentOperand: string;
   previosOperand: string;
   operation: any;
+  clicktoEqual: boolean;
 
   constructor(previosOperandTextElement: Element , currentOperandTextElement: Element)
   {
@@ -18,7 +19,7 @@ class Calculator {
     this.currentOperand = "";
     this.previosOperand = "";
     this.operation = undefined;
-
+    this.clicktoEqual = false;
   }
 
   delete(){
@@ -27,7 +28,15 @@ class Calculator {
 
   appendNumber(number: string){
     if(number == '.' && this.currentOperand.indexOf('.') != -1) return;
-    this.currentOperand +=  number.toString();
+    if(this.clicktoEqual)
+    {
+      this.currentOperand =  number.toString();
+      this.clicktoEqual = false;
+    }
+    else {
+      this.currentOperand +=  number.toString();
+    }
+
   }
 
   chooseOperations(operation: string){
@@ -68,6 +77,7 @@ class Calculator {
     this.currentOperand = computation.toString();
     this.operation = undefined;
     this.previosOperand = "";
+    this.clicktoEqual = true;
   }
 
   getDisplayNumber(number) {
@@ -150,7 +160,6 @@ numberButtons.forEach((button: any)  => {
 })
 
 const clickONNumbers =  (button: any)  => {
-  console.log(button);
   calcuator.appendNumber(button?.innerText);
   calcuator.updateDisplay();
 }
