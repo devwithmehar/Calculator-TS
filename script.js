@@ -8,6 +8,7 @@ var Calculator = /** @class */ (function () {
         this.currentOperand = "";
         this.previosOperand = "";
         this.operation = undefined;
+        this.clicktoEqual = false;
     };
     Calculator.prototype["delete"] = function () {
         this.currentOperand = this.currentOperand.toString().slice(0, -1);
@@ -15,7 +16,13 @@ var Calculator = /** @class */ (function () {
     Calculator.prototype.appendNumber = function (number) {
         if (number == '.' && this.currentOperand.indexOf('.') != -1)
             return;
-        this.currentOperand += number.toString();
+        if (this.clicktoEqual) {
+            this.currentOperand = number.toString();
+            this.clicktoEqual = false;
+        }
+        else {
+            this.currentOperand += number.toString();
+        }
     };
     Calculator.prototype.chooseOperations = function (operation) {
         if (this.currentOperand === "")
@@ -55,6 +62,7 @@ var Calculator = /** @class */ (function () {
         this.currentOperand = computation.toString();
         this.operation = undefined;
         this.previosOperand = "";
+        this.clicktoEqual = true;
     };
     Calculator.prototype.getDisplayNumber = function (number) {
         var stringNumber = number.toString();
@@ -113,7 +121,6 @@ numberButtons.forEach(function (button) {
     button.addEventListener('click', clickONNumbers);
 });
 var clickONNumbers = function (button) {
-    console.log(button);
     calcuator.appendNumber(button === null || button === void 0 ? void 0 : button.innerText);
     calcuator.updateDisplay();
 };
