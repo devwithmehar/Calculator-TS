@@ -1,0 +1,30 @@
+button{
+  width: 65px;
+  height: 65px;
+}
+
+
+.output{
+  word-wrap: break-word;
+  word-break: break-all;
+  min-height: 50px;
+  max-height: 80px;
+}
+
+.result{
+  word-wrap: break-word;
+  word-break: break-all;
+  min-height: 55px;
+  max-height: 81px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.output::-webkit-scrollbar, .result::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.output , .result{
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}

@@ -1,0 +1,118 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+  <title>Cacluator</title>
+  <script src="./script.js" defer></script>
+</head>
+<body>
+
+  <section class="flex items-center justify-center h-screen w-screen
+                  bg-gray-200 bg-black">
+      <div class="flex flex-col max-w-sm   h-fit w-fit p-3 text-white bg-black rounded-3xl ">
+
+          <div class="border-none outline-none focus: outline-none bg-black
+          text-orange-300 text-2xl font-[1500]
+          text-right break-all output overflow-y-scroll"
+          data-previos-operand
+          >
+
+        </div>
+
+          <div class="border-none outline-none focus: outline-none bg-black
+          text-white text-3xl font-[1500]
+          text-right break-all result overflow-y-scroll mb-2"
+          data-current-operand
+          >
+        
+        </div>
+           <span class="grid gap-4 grid-cols-4 grid-rows-3  p-1 ">
+              <button class="bg-gray-200 text-black p-1 text-lg font-semibold rounded-full"
+              data-all-clear >
+                AC
+              </button>
+              <button class="bg-gray-200 text-black p-1 text-lg font-semibold rounded-full"
+               data-delete >
+                DEL
+              </button>
+              <button class="bg-gray-200 text-black p-1 text-lg font-semibold  rounded-full"
+              data-operation
+              >
+                %
+              </button>
+              <button class="bg-orange-400 text-white p-1 text-lg font-semibold rounded-full"
+              data-operation
+              >
+                 /
+              </button>
+              <button class="bg-gray-800 text-white p-1 text-lg font-semibold rounded-full"
+              data-number>
+                7
+              </button>
+              <button class="bg-gray-800 text-white p-1 text-lg font-semibold rounded-full"
+              data-number >
+                8
+              </button>
+              <button class="bg-gray-800 text-white p-1 text-lg font-semibold rounded-full"
+              data-number >
+                9
+              </button>
+              <button class="bg-orange-400 text-white p-1 text-lg font-semibold rounded-full"
+              data-operation
+              >
+                 X
+              </button>
+              <button class="bg-gray-800 text-white p-1 text-lg font-semibold rounded-full"
+              data-number >
+                4
+              </button>
+              <button class="bg-gray-800 text-white p-1 text-lg font-semibold rounded-full"
+              data-number >
+                5
+              </button>
+              <button class="bg-gray-800 text-white p-1 text-lg font-semibold rounded-full"
+              data-number >
+                6
+              </button>
+              <button class="bg-orange-400 text-white p-1 text-lg font-semibold rounded-full"
+              data-operation >
+                -
+              </button>
+              <button class="bg-gray-800 text-white p-1 text-lg font-semibold rounded-full"
+              data-number >
+                1
+              </button>
+              <button class="bg-gray-800 text-white p-1 text-lg font-semibold rounded-full"
+              data-number >
+                2
+              </button>
+              <button class="bg-gray-800 text-white p-1 text-lg font-semibold rounded-full"
+              data-number >
+                3
+              </button>
+              <button class="bg-orange-400 text-white p-1 text-lg font-semibold rounded-full"
+              data-operation>
+                +
+              </button>
+              <button class="bg-gray-800 text-white pl-10 pr-1 pt-1 pb-1 text-lg font-semibold rounded-full col-span-2 text-left"
+               style="height: 65px; width: 155px;" data-number >
+                0
+              </button>
+              <button class="bg-gray-800 text-white p-1 text-lg font-semibold rounded-full" data-number>
+                .
+              </button>
+
+              <button class="bg-orange-400 text-white p-1 text-lg font-semibold rounded-full"
+              data-equals>
+                =
+              </button>
+
+           </span>
+      </div>
+  </section>
+
+</body>
+</html>
