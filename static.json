@@ -4,8 +4,8 @@
   "https_only": true,
   "error_page": "error.html",
   "headers": {
-    "/**" : {
-      "Access-Control-Allow-Origin": "*"
-    }
+      "/**": {
+          "Access-Control-Allow-Origin": "*"
+      }
   }
 }
