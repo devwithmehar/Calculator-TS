@@ -54,7 +54,7 @@ var Calculator = /** @class */ (function () {
                 computation = prev / current;
                 break;
             case '%':
-                computation = (prev / current) * 100;
+                computation = (prev / 100) * current;
                 break;
             default:
                 return;
